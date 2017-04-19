@@ -49,7 +49,7 @@
 
         // Загрузка последних статей
         loadTopArticles: function (lastLoadedIndex, success, error) {
-            if (!lastLoadedIndex) lastLoadedIndex = 1;
+            if (!lastLoadedIndex) lastLoadedIndex = 0;
             return req('toparticles/' + lastLoadedIndex, success, error);
         },
 
