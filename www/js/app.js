@@ -166,6 +166,7 @@
                     loadingTopItems = false;
                     // Результат  
                     var items = JSON.parse(data)['#value'];
+                    console.log(items);
                     if (items.length === 0) {
                         // Nothing more to load, detach infinite scroll events to prevent unnecessary loadings
                         app.detachInfiniteScroll($$(page.container).find('.infinite-scroll'));
