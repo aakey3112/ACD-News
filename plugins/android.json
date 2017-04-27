@@ -1,0 +1,41 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "kz.kz.push"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "kz.kz.push"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "kz.kz.push"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "kz.kz.push"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "400367918807",
+            "PACKAGE_NAME": "kz.kz.push"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "kz.kz.push"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "kz.kz.push"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "kz.kz.push"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "kz.kz.push"
+        }
+    }
+}

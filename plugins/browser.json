@@ -22,6 +22,9 @@
         "phonegap-plugin-push": {
             "SENDER_ID": "400367918807",
             "PACKAGE_NAME": "kz.acd.mobile.acd.news"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "kz.kz.push"
         }
     },
     "dependent_plugins": {
@@ -30,6 +33,12 @@
         },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "kz.acd.mobile.acd.news"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "kz.kz.push"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "kz.kz.push"
         }
     }
 }
