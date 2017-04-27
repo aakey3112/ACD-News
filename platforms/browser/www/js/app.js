@@ -13,6 +13,7 @@
         animateNavBackIcon: true,
         material: false,
         materialRipple: false,
+        pushState: !!Framework7.prototype.device.os,
         onPageInit: function (app, page) {
             if (page.name === 'index') {
                 // Список последних элементов
@@ -443,8 +444,7 @@
         });
         $$('.button-send-id').on('click', function (e) {
             app.confirm('Отправить ID устройства на сервер?', 'Регистрация устройства', function () {
-             window.alert('ok1');
-             setupPush();   
+               setupPush();   
             });
         });
     });
