@@ -599,6 +599,7 @@ function setupPush(){
       localStorage.setItem('registrationId', data.registrationId);
       //Post registrationId to your app server as the value has changed
     }
+    
   });
 
   push.on('error', function(e){
