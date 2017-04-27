@@ -127,6 +127,18 @@
                 '   </ul>' +
                 '</div>';
         }
+           sectionsHTML += ' <div class="content-block-title">  Дополнительно </div>'+
+                           '          <div class="list-block">'+
+                           '             <ul>'+
+                           '                <li>'+
+                           '                   <a href="settings.html" class="item-link item-content close-panel">'+
+                           '                      <div class="item-inner">'+
+                           '                         <div class="item-title">Настройки</div>'+
+                           '                    </div>'+
+                           '               </a>'+
+                           '          </li>'+
+                           '     </ul>'+
+                            '</div>';
         $$('.categories').html(sectionsHTML);
     };
 

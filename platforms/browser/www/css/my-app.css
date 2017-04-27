@@ -247,4 +247,5 @@ body.with-panel-left-cover .panel, body.with-panel-right-cover .panel {
 
 .layout-dark .categories .content-block-title {
     color: #aaa;
+    font-weight: 600;
 }
