@@ -42,6 +42,7 @@
 
         url: url,
 
+      
         // Загрузка категорий
         loadCategories: function (success, error) {
             return req('categories', success, error);
@@ -67,6 +68,11 @@
         // Авторизация
         checkAuth: function (data, success, error) {
             return reqPOST('auth/', data, success, error);
+        },
+        
+        //Отправить device ID
+        SendDeviceID: function (deviceid, success, error,){
+            return req('deviceid/', deviceid, success, error);
         }
     };
 
