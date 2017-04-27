@@ -44,6 +44,14 @@ module.exports = [
         "id": "cordova-plugin-network-information.NetworkInfoProxy",
         "pluginId": "cordova-plugin-network-information",
         "runs": true
+    },
+    {
+        "file": "plugins/phonegap-plugin-push/www/push.js",
+        "id": "phonegap-plugin-push.PushNotification",
+        "pluginId": "phonegap-plugin-push",
+        "clobbers": [
+            "PushNotification"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -53,7 +61,9 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "4.0.3-dev",
     "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-whitelist": "1.2.2",
-    "cordova-plugin-network-information": "1.3.2"
+    "cordova-plugin-network-information": "1.3.2",
+    "phonegap-plugin-push": "1.6.0",
+    "cordova-plugin-crosswalk-webview": "2.3.0"
 }
 // BOTTOM OF METADATA
 });

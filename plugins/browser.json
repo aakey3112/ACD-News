@@ -8,21 +8,28 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.phonegap.intra"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.phonegap.intra"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.phonegap.intra"
+            "PACKAGE_NAME": "kz.acd.mobile.acd.news"
         },
         "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.phonegap.intra"
+            "PACKAGE_NAME": "kz.acd.mobile.acd.news"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "kz.acd.mobile.acd.news"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "kz.acd.mobile.acd.news"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "400367918807",
+            "PACKAGE_NAME": "kz.acd.mobile.acd.news"
         }
     },
     "dependent_plugins": {
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "kz.acd.mobile.acd.news"
+        },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.phonegap.intra"
+            "PACKAGE_NAME": "kz.acd.mobile.acd.news"
         }
     }
 }

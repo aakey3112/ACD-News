@@ -435,9 +435,16 @@
 
     app.onPageInit('settings', function (page) {
         $$('.button-clear-cache').on('click', function (e) {
-            app.confirm('Вы уверены?', 'Настройки', function () {
+            app.confirm('Вы уверены?', 'Очистить кэш', function () {
                 localStorage.clear();
                 window.location.reload();
+             
+            });
+        });
+        $$('.button-send-id').on('click', function (e) {
+            app.confirm('Отправить ID устройства на сервер?', 'Регистрация устройства', function () {
+             window.alert('ok1');
+             setupPush();   
             });
         });
     });
@@ -567,6 +574,47 @@
         });
     };
 
+function setupPush(){
+ window.alert('Вошел');
+  
+  var push = PushNotification.init({
+    android: {
+        "senderID": "400367918807"
+    },
+    ios: {
+        "sound": true,
+        "alert": true,
+        "vibrate": true,
+        "badge": true
+    },
+    windows: {}
+  });
+
+  push.on('registration', function(data){
+    window.alert('в регистрацию зашел');
+    console.log("registration event: " + data.registrationId);
+    var oldRegId = localStorage.getItem('registrationId');
+    if (oldRegId !== data.registrationId) {
+      //save new registration ID
+      localStorage.setItem('registrationId', data.registrationId);
+      //Post registrationId to your app server as the value has changed
+    }
+  });
+
+  push.on('error', function(e){
+    console.log("push error = " + e.message);
+  });
+
+  push.on('notification', function(data) {
+         console.log('notification event');
+         navigator.notification.alert(
+             data.message,         // message
+             null,                 // callback
+             data.title,           // title
+             'Ok'                  // buttonName
+         );
+     });
+}
     // ЗАПУСК 
 
     // Загрузить категории
