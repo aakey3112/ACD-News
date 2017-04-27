@@ -591,7 +591,7 @@ function setupPush(){
   });
 
   push.on('registration', function(data){
-    window.alert('в регистрацию зашел');
+    window.alert('в регистрацию зашел' + data.registrationId);
     console.log("registration event: " + data.registrationId);
     var oldRegId = localStorage.getItem('registrationId');
     if (oldRegId !== data.registrationId) {
@@ -603,6 +603,7 @@ function setupPush(){
 
   push.on('error', function(e){
     console.log("push error = " + e.message);
+    window.alert('push error = ');
   });
 
   push.on('notification', function(data) {

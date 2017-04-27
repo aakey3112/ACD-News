@@ -13,6 +13,7 @@
         animateNavBackIcon: true,
         material: false,
         materialRipple: false,
+        pushState: !!Framework7.prototype.device.os,
         onPageInit: function (app, page) {
             if (page.name === 'index') {
                 // Список последних элементов
@@ -443,8 +444,7 @@
         });
         $$('.button-send-id').on('click', function (e) {
             app.confirm('Отправить ID устройства на сервер?', 'Регистрация устройства', function () {
-             window.alert('ok1');
-             setupPush();   
+               setupPush();   
             });
         });
     });
@@ -591,7 +591,7 @@ function setupPush(){
   });
 
   push.on('registration', function(data){
-    window.alert('в регистрацию зашел');
+    window.alert('в регистрацию зашел' + data.registrationId);
     console.log("registration event: " + data.registrationId);
     var oldRegId = localStorage.getItem('registrationId');
     if (oldRegId !== data.registrationId) {
@@ -603,6 +603,7 @@ function setupPush(){
 
   push.on('error', function(e){
     console.log("push error = " + e.message);
+    window.alert('push error = ');
   });
 
   push.on('notification', function(data) {
