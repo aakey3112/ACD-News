@@ -65,14 +65,15 @@
             return req('article/' + articleId, success, error);
         },
 
-        // Авторизация
+        // Авторизацияs
         checkAuth: function (data, success, error) {
             return reqPOST('auth/', data, success, error);
         },
         
         //Отправить device ID
-        SendDeviceID: function (deviceid, success, error,){
-            return req('deviceid/', deviceid, success, error);
+        sendDeviceID: function (deviceid, success, error,){
+       
+            return reqPOST('deviceid/', deviceid, success, error);
         }
     };
 

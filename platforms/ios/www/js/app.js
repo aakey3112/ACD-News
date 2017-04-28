@@ -575,8 +575,7 @@
     };
 
 function setupPush(){
- window.alert('Вошел');
-  
+ 
   var push = PushNotification.init({
     android: {
         "senderID": "400367918807"
@@ -591,7 +590,6 @@ function setupPush(){
   });
 
   push.on('registration', function(data){
-    window.alert('в регистрацию зашел' + data.registrationId);
     console.log("registration event: " + data.registrationId);
     var oldRegId = localStorage.getItem('registrationId');
     if (oldRegId !== data.registrationId) {
@@ -600,6 +598,20 @@ function setupPush(){
       //Post registrationId to your app server as the value has changed
     }
     
+    var usingplatform = 'no';
+    var deviceIDplatform = '';
+
+    if(Framework7.prototype.device.ios){
+        usingplatform = 'ios';
+    }
+    else{
+       usingplatform  = 'android'; 
+    }
+    
+    deviceIDplatform = data.registrationId;
+    deviceIDplatform += '_pl_';
+    deviceIDplatform += usingplatform;
+    intraapi.sendDeviceID(deviceIDplatform);
   });
 
   push.on('error', function(e){
