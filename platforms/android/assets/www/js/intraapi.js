@@ -3,7 +3,7 @@
 
     var url = 'https://web.applecity.kz:3381/',     // адрес сервера
         apiPath = 'mobileintra/hs/api/',            // адрес API
-        rcount = 2,                                 // кол-во попыток загрузки данных
+        rcount = 1,                                 // кол-во попыток загрузки данных
         req, reqPOST, intraapi;
 
     req = function (path, success, error, retry) {
